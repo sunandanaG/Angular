@@ -1,0 +1,31 @@
+<p align="center">component1 works!</p>
+<div align="center">
+    <table  border="2"  align="center">
+
+    <tr>
+
+        <td> EmployeeId </td>
+
+        <td>EmployeeName</td>
+
+        <td>EmployeeSalary</td>
+
+    </tr>
+
+
+
+<tr appMycolor *ngFor='let customer of customers'>
+
+<td>{{customer.empId}} </td>
+
+<td>{{customer.empName}} </td>
+
+<td>{{customer.salary}}</td>
+
+</tr>
+
+</table>
+
+<button (click)='modifiedData()'>Click Here</button>
+
+</div>

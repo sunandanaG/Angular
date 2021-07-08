@@ -1,0 +1,17 @@
+<h3 align='center'>Calculator Component using service</h3>
+<hr>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<table align='center'>
+  <tr><td>First Number  :<input type="text" class="form-control" [(ngModel)]="a"></td></tr>
+  <tr><td> Second Number :<input type="text" class="form-control" [(ngModel)]="b"></td></tr>
+  <tr><td>Result   : <input type="text" class="form-control" [(ngModel)]="result" readonly></td></tr>
+  <tr>
+    <td>
+        <button class="btn btn-success" (click)="Operation('+')">Add</button>&nbsp;
+        <button class="btn btn-info"   (click)="Operation('-')">Subtract</button>&nbsp;
+        <button class="btn btn-warning"  (click)="Operation('x')">Multiply</button>&nbsp;
+        <button class="btn btn-primary" (click)="Operation('/')">Divide</button>&nbsp;
+    </td>
+  </tr>
+</table>

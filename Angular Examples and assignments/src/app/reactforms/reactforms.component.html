@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Reactive Forms</h2><hr>
+      <form [formGroup]='productForm' (ngSubmit)='submitData()'>
+            <div class='form-group'>
+                 <label>ProductName: </label>
+                 <input type='text' formControlName='productName' class='form-control'>
+            </div>
+            <div *ngIf="productForm.get('productName')?.valid" class="text text-success">UserName is valid</div>
+            <div *ngIf="productForm.get('productName')?.invalid && productForm.get('productName')">
+            <div *ngIf="productForm.get('productName')?.errors?.required" class="text text-danger">UserName is required</div>
+            <div *ngIf="productForm.get('productName')?.errors?.minlength" class="text text-danger">UserName must be atlest 3 characters</div>
+            <div *ngIf="productForm.get('productName')?.errors?.pattern" class="text text-danger">Invalid User Name</div></div>
+            <br>
+  
+            <div formGroupName="productAddess">
+            <div class='form-group'>
+                <label>City</label>
+                <input  type='text' formControlName='City' class='form-control'>
+            </div>
+            <div *ngIf="productForm.get('productAddess')?.get('City')?.valid" class="text text-success">City is valid</div>
+            <div *ngIf="productForm.get('productAddess')?.get('City')?.invalid && productForm.get('productAddess')?.get('City')?.touched">
+            <div *ngIf="productForm.get('productAddess')?.get('City')?.errors?.required" class="text text-danger">City is required</div>
+            <div *ngIf="productForm.get('productAddess')?.get('City')?.errors?.pattern" class="text text-danger">Invalid City</div></div>
+            <br>
+            <div class='form-group'>
+                <label >Postal Code</label>
+                <input  type='text' formControlName='PostalCode' class='form-control'>
+            </div>
+            <div *ngIf="productForm.get('productAddess')?.get('PostalCode')?.valid" class="text text-success">Postal is valid</div>
+            <div *ngIf="productForm.get('productAddess')?.get('PostalCode')?.invalid && productForm.get('productAddess')?.get('PostalCode')?.touched">
+            <div *ngIf="productForm.get('productAddess')?.get('PostalCode')?.errors?.required" class="text text-danger">PostalCode is required</div>
+            <div *ngIf="productForm.get('productAddess')?.get('PostalCode')?.errors?.minlength" class="text text-danger">Postal must be atlest 6 digits</div>
+            <div *ngIf="productForm.get('productAddess')?.get('PostalCode')?.errors?.pattern" class="text text-danger">Invalid PostalCode</div></div>
+        </div>
+        <br>
+          <button [disabled]='!productForm.valid' type='submit' class='btn btn-success'>Submit</button>
+      </form>
+  </div>
+  <br>
+  <hr>

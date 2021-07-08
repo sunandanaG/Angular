@@ -1,0 +1,14 @@
+<h2>Java</h2>
+<div class ='container' align='center'>
+
+    <div class="row">
+      <div ngColor *ngFor='let course of courses' class="col-sm">
+        <a [routerLink]='[course.courseid]' routerLinkActive="active"><img [src]='course.courseImg' height='60px' width='60px'></a>
+
+
+    </div>
+
+
+</div>
+<router-outlet></router-outlet>
+</div>

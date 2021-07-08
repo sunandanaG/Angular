@@ -1,0 +1,30 @@
+<!-- <p>assignment-product works!</p>
+<table border="1" bgcolor='#e0dad8'>
+<tr>
+    <td bgcolor='#f7b9a4'>Search:<input type="text" [(ngModel)]="filter" ></td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <td>sorting:
+        <select class="form-select" [(ngModel)]="funnel">
+          <option [value]="'a-z'">A-Z</option>
+          <option [value]="'z-a'">Z-A</option>
+          <option [value]="'low'">Low-High</option>
+          <option [value]="'high'">High-Low</option>
+        </select>
+        </td>
+</tr>
+<tr><th>PID</th>
+    <th>ProductName</th>
+    <th>Productprice</th>
+    <th>productdesc</th>
+    <th>productimage</th>
+
+</tr>
+<tr *ngFor="let product of  products|search:filter|sorting:funnel">
+<td>{{product.productid}}</td>
+<td>{{product.productname}}</td>
+<td>{{product.productprice}}</td>
+<td>{{product.productdesc}}</td>
+<td><img [src]='product.productimg' height='60px' width='50px'></td>
+
+</tr>
+</table> -->
